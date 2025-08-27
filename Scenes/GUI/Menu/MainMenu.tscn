@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkgi464n1r10m"]
+
+[ext_resource type="Texture2D" uid="uid://c10t1p057dxx5" path="res://icon.svg" id="1_tolxp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_t7e0x"]
+frame_0/texture = ExtResource("1_tolxp")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackGround" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_t7e0x")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -222.0
+offset_right = 224.0
+offset_bottom = 209.0
+grow_horizontal = 2
