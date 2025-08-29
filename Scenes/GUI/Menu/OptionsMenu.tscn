@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6mfkyu4f8dn1"]
 
-[ext_resource type="Texture2D" uid="uid://c10t1p057dxx5" path="res://icon.svg" id="1_kas35"]
+[ext_resource type="Texture2D" uid="uid://ct5y8c2nhp62a" path="res://Assets/Placeholder/1729592338.jpg" id="1_kas35"]
 
 [node name="Options" type="Control"]
 process_mode = 3
