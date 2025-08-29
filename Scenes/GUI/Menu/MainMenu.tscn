@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkgi464n1r10m"]
+[gd_scene load_steps=4 format=3 uid="uid://dkgi464n1r10m"]
 
 [ext_resource type="Texture2D" uid="uid://c10t1p057dxx5" path="res://icon.svg" id="1_tolxp"]
+[ext_resource type="PackedScene" uid="uid://b6mfkyu4f8dn1" path="res://Scenes/GUI/Menu/OptionsMenu.tscn" id="2_t7e0x"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_t7e0x"]
 frame_0/texture = ExtResource("1_tolxp")
 
 [node name="MainMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,3 +99,10 @@ offset_right = 224.0
 offset_bottom = 209.0
 grow_horizontal = 2
 texture = ExtResource("1_tolxp")
+
+[node name="Options" parent="." instance=ExtResource("2_t7e0x")]
+layout_mode = 1
+offset_top = -653.0
+offset_bottom = -653.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
