@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://dhhdqn8r66jgm"]
+[gd_scene load_steps=3 format=3 uid="uid://dhhdqn8r66jgm"]
 
-[node name="TestStage" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dtrg76uminbwx" path="res://Assets/Placeholder/buehne-kaufen-6mx4m-mit-dach-1_1.jpg" id="1_06kga"]
+[ext_resource type="Script" uid="uid://b736ajvid73fs" path="res://Scripts/Stages/Stages/test_stage.gd" id="1_fgcf0"]
+
+[node name="TestStage" type="Node2D" node_paths=PackedStringArray("p1_spawn", "p2_spawn")]
+script = ExtResource("1_fgcf0")
+p1_spawn = NodePath("spawn1")
+p2_spawn = NodePath("spawn2")
+
+[node name="Buehne-kaufen-6Mx4m-mit-dach-11" type="Sprite2D" parent="."]
+position = Vector2(588, 365)
+texture = ExtResource("1_06kga")
+
+[node name="spawn1" type="Node2D" parent="."]
+position = Vector2(873, 601)
+
+[node name="spawn2" type="Node2D" parent="."]
+position = Vector2(220, 583)

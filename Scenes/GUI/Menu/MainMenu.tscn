@@ -6,6 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dywrk5heklgkg" path="res://Assets/Placeholder/unnamed.png" id="2_sa1ms"]
 [ext_resource type="PackedScene" uid="uid://b6mfkyu4f8dn1" path="res://Scenes/GUI/Menu/OptionsMenu.tscn" id="2_t7e0x"]
 
+[sub_resource type="Animation" id="Animation_35r5c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Options:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -653)]
+}
+
 [sub_resource type="Animation" id="Animation_sa1ms"]
 resource_name = "close_animations"
 length = 0.5
@@ -36,21 +51,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, -653), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_35r5c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Options:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -653)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5isb3"]
