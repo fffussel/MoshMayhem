@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6mfkyu4f8dn1"]
+[gd_scene load_steps=3 format=3 uid="uid://b6mfkyu4f8dn1"]
 
+[ext_resource type="Script" uid="uid://b2abrvbbiu1sv" path="res://Scripts/UI/Menu/options_menu.gd" id="1_4wsqg"]
 [ext_resource type="Texture2D" uid="uid://ct5y8c2nhp62a" path="res://Assets/Placeholder/1729592338.jpg" id="1_kas35"]
 
 [node name="Options" type="Control"]
@@ -10,23 +11,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4wsqg")
 
-[node name="Body" type="NinePatchRect" parent="."]
+[node name="Backbutton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Body" type="NinePatchRect" parent="Backbutton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -284.0
-offset_top = -250.0
-offset_right = 286.0
-offset_bottom = 270.0
+offset_left = -285.0
+offset_top = -260.0
+offset_right = 285.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_kas35")
 
-[node name="TabContainer" type="TabContainer" parent="Body"]
+[node name="TabContainer" type="TabContainer" parent="Backbutton/Body"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,16 +47,18 @@ grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
 
-[node name="Video" type="Control" parent="Body/TabContainer"]
+[node name="Video" type="Control" parent="Backbutton/Body/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Audio" type="Control" parent="Body/TabContainer"]
+[node name="Audio" type="Control" parent="Backbutton/Body/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Input" type="Control" parent="Body/TabContainer"]
+[node name="Input" type="Control" parent="Backbutton/Body/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]

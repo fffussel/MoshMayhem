@@ -1,9 +1,64 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkgi464n1r10m"]
+[gd_scene load_steps=10 format=3 uid="uid://dkgi464n1r10m"]
 
 [ext_resource type="Texture2D" uid="uid://dtrg76uminbwx" path="res://Assets/Placeholder/buehne-kaufen-6mx4m-mit-dach-1_1.jpg" id="1_n2aqc"]
+[ext_resource type="Script" uid="uid://dx0y06rjqvxi0" path="res://Scripts/UI/Menu/main_menu.gd" id="1_sa1ms"]
 [ext_resource type="Texture2D" uid="uid://c850ftabdhr7x" path="res://icon.svg" id="1_tolxp"]
 [ext_resource type="Texture2D" uid="uid://dywrk5heklgkg" path="res://Assets/Placeholder/unnamed.png" id="2_sa1ms"]
 [ext_resource type="PackedScene" uid="uid://b6mfkyu4f8dn1" path="res://Scenes/GUI/Menu/OptionsMenu.tscn" id="2_t7e0x"]
+
+[sub_resource type="Animation" id="Animation_sa1ms"]
+resource_name = "close_animations"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Options:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -668)]
+}
+
+[sub_resource type="Animation" id="Animation_rqvw8"]
+resource_name = "open_animations"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Options:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -653), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_35r5c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Options:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -653)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5isb3"]
+_data = {
+&"RESET": SubResource("Animation_35r5c"),
+&"close_options": SubResource("Animation_sa1ms"),
+&"open_options": SubResource("Animation_rqvw8")
+}
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -13,6 +68,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_sa1ms")
 
 [node name="BackGround" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -30,6 +87,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Play" type="Control" parent="Menu"]
 layout_mode = 1
@@ -43,6 +101,7 @@ offset_right = 6.97598
 offset_bottom = 5.75995
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="PlayButtonTexture" type="NinePatchRect" parent="Menu/Play"]
 layout_mode = 1
@@ -54,9 +113,13 @@ grow_vertical = 2
 texture = ExtResource("2_sa1ms")
 
 [node name="PlayButton" type="Button" parent="Menu/Play/PlayButtonTexture"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
 flat = true
 
 [node name="Options" type="Control" parent="Menu"]
@@ -71,6 +134,7 @@ offset_right = 516.976
 offset_bottom = 5.75995
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="OptionsButtonTexture" type="NinePatchRect" parent="Menu/Options"]
 layout_mode = 1
@@ -82,10 +146,13 @@ grow_vertical = 2
 texture = ExtResource("2_sa1ms")
 
 [node name="OptionsButton" type="Button" parent="Menu/Options/OptionsButtonTexture"]
-layout_mode = 0
-offset_left = -510.0
-offset_right = -502.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
 flat = true
 
 [node name="Title" type="NinePatchRect" parent="."]
@@ -99,9 +166,16 @@ offset_bottom = 209.0
 grow_horizontal = 2
 texture = ExtResource("1_tolxp")
 
-[node name="Options" parent="." instance=ExtResource("2_t7e0x")]
+[node name="Options" parent="." node_paths=PackedStringArray("animation_p") instance=ExtResource("2_t7e0x")]
 layout_mode = 1
 offset_top = -653.0
 offset_bottom = -653.0
+animation_p = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5isb3")
+}
+
+[connection signal="pressed" from="Menu/Play/PlayButtonTexture/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Menu/Options/OptionsButtonTexture/OptionsButton" to="." method="_on_options_button_pressed"]
