@@ -28,7 +28,6 @@ texture = SubResource("PlaceholderTexture2D_fgcf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackGround/Platform/StaticBody2D"]
 position = Vector2(-0.0021835, -0.010869)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ugi4s")
 
 [node name="spawn1" type="Node2D" parent="."]
