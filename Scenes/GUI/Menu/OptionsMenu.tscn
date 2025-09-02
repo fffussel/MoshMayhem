@@ -45,9 +45,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 0
+current_tab = 2
 
 [node name="Video" type="Control" parent="Backbutton/Body/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -57,8 +58,26 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Input" type="Control" parent="Backbutton/Body/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="TabContainer" type="TabContainer" parent="Backbutton/Body/TabContainer/Input"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 2
+current_tab = 0
+
+[node name="Controller" type="Control" parent="Backbutton/Body/TabContainer/Input/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Keyboard" type="Control" parent="Backbutton/Body/TabContainer/Input/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [connection signal="pressed" from="Backbutton" to="." method="_on_backbutton_pressed"]
