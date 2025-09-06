@@ -1,10 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkgi464n1r10m"]
+[gd_scene load_steps=13 format=3 uid="uid://dkgi464n1r10m"]
 
 [ext_resource type="Texture2D" uid="uid://dtrg76uminbwx" path="res://Assets/Placeholder/buehne-kaufen-6mx4m-mit-dach-1_1.jpg" id="1_n2aqc"]
 [ext_resource type="Script" uid="uid://dx0y06rjqvxi0" path="res://Scripts/UI/Menu/main_menu.gd" id="1_sa1ms"]
-[ext_resource type="Texture2D" uid="uid://c850ftabdhr7x" path="res://icon.svg" id="1_tolxp"]
-[ext_resource type="Texture2D" uid="uid://dywrk5heklgkg" path="res://Assets/Placeholder/unnamed.png" id="2_sa1ms"]
 [ext_resource type="PackedScene" uid="uid://b6mfkyu4f8dn1" path="res://Scenes/GUI/Menu/OptionsMenu.tscn" id="2_t7e0x"]
+[ext_resource type="Texture2D" uid="uid://csf4dplki845h" path="res://Assets/menu/buttons/PlayButton.png" id="3_35r5c"]
+[ext_resource type="Texture2D" uid="uid://dcihiijyfimv1" path="res://Assets/menu/buttons/settings button.png" id="4_5isb3"]
+[ext_resource type="FontFile" uid="uid://n83lsiayblu3" path="res://Assets/menu/Font/PUNKIS.ttf" id="5_eohp1"]
+[ext_resource type="Texture2D" uid="uid://ct5y8c2nhp62a" path="res://Assets/Placeholder/1729592338.jpg" id="6_h3ou0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_otipi"]
+font = ExtResource("5_eohp1")
+font_size = 100
+outline_size = 17
+shadow_size = 0
 
 [sub_resource type="Animation" id="Animation_35r5c"]
 length = 0.001
@@ -108,9 +116,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -86.0
+offset_right = 3.05176e-05
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sa1ms")
+texture = ExtResource("3_35r5c")
 
 [node name="PlayButton" type="Button" parent="Menu/Play/PlayButtonTexture"]
 layout_mode = 1
@@ -141,9 +152,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -84.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sa1ms")
+texture = ExtResource("4_5isb3")
 
 [node name="OptionsButton" type="Button" parent="Menu/Options/OptionsButtonTexture"]
 layout_mode = 1
@@ -155,16 +167,36 @@ grow_vertical = 2
 action_mode = 0
 flat = true
 
-[node name="Title" type="NinePatchRect" parent="."]
+[node name="Title background" type="NinePatchRect" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -222.0
-offset_right = 224.0
-offset_bottom = 209.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 358.0
+offset_right = -347.0
+offset_bottom = -396.0
 grow_horizontal = 2
-texture = ExtResource("1_tolxp")
+grow_vertical = 2
+texture = ExtResource("6_h3ou0")
+
+[node name="Title" type="Label" parent="Title background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -104.5
+offset_right = 223.0
+offset_bottom = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "MOSH 
+MAYHEM"
+label_settings = SubResource("LabelSettings_otipi")
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Options" parent="." node_paths=PackedStringArray("animation_p") instance=ExtResource("2_t7e0x")]
 layout_mode = 1
