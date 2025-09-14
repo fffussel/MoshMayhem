@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dtrg76uminbwx" path="res://Assets/Placeholder/buehne-kaufen-6mx4m-mit-dach-1_1.jpg" id="1_n2aqc"]
 [ext_resource type="Script" uid="uid://dx0y06rjqvxi0" path="res://Scripts/UI/Menu/main_menu.gd" id="1_sa1ms"]
 [ext_resource type="PackedScene" uid="uid://b6mfkyu4f8dn1" path="res://Scenes/GUI/Menu/OptionsMenu.tscn" id="2_t7e0x"]
-[ext_resource type="Texture2D" uid="uid://csf4dplki845h" path="res://Assets/menu/buttons/PlayButton.png" id="3_35r5c"]
-[ext_resource type="Texture2D" uid="uid://dcihiijyfimv1" path="res://Assets/menu/buttons/settings button.png" id="4_5isb3"]
-[ext_resource type="FontFile" uid="uid://n83lsiayblu3" path="res://Assets/menu/Font/PUNKIS.ttf" id="5_eohp1"]
+[ext_resource type="Texture2D" uid="uid://csf4dplki845h" path="res://Assets/Placeholder/buttons/PlayButton.png" id="3_35r5c"]
+[ext_resource type="Texture2D" uid="uid://dcihiijyfimv1" path="res://Assets/Placeholder/buttons/settings button.png" id="4_5isb3"]
+[ext_resource type="FontFile" uid="uid://n83lsiayblu3" path="res://Assets/Placeholder/Font/PUNKIS.ttf" id="5_eohp1"]
 [ext_resource type="Texture2D" uid="uid://ct5y8c2nhp62a" path="res://Assets/Placeholder/1729592338.jpg" id="6_h3ou0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_otipi"]

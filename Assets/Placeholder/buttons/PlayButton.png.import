@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcncr5gi7i81t"
-path="res://.godot/imported/Vinyl.png-306a3fd74675efe9f7618c7c7b66b1bb.ctex"
+uid="uid://csf4dplki845h"
+path="res://.godot/imported/PlayButton.png-feb17baf9859f9c0148998ca3da2c017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/menu/animations/Vinyl.png"
-dest_files=["res://.godot/imported/Vinyl.png-306a3fd74675efe9f7618c7c7b66b1bb.ctex"]
+source_file="res://Assets/Placeholder/buttons/PlayButton.png"
+dest_files=["res://.godot/imported/PlayButton.png-feb17baf9859f9c0148998ca3da2c017.ctex"]
 
 [params]
 

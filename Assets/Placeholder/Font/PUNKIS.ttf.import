@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://n83lsiayblu3"
-path="res://.godot/imported/PUNKIS.ttf-9c5ae1ab18bcabb20088a12319fbe655.fontdata"
+path="res://.godot/imported/PUNKIS.ttf-79e07ccd610885d09fefb6df5cb55be6.fontdata"
 
 [deps]
 
-source_file="res://Assets/menu/Font/PUNKIS.ttf"
-dest_files=["res://.godot/imported/PUNKIS.ttf-9c5ae1ab18bcabb20088a12319fbe655.fontdata"]
+source_file="res://Assets/Placeholder/Font/PUNKIS.ttf"
+dest_files=["res://.godot/imported/PUNKIS.ttf-79e07ccd610885d09fefb6df5cb55be6.fontdata"]
 
 [params]
 

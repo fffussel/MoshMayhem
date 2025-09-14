@@ -1,0 +1,12 @@
+high priority:
+	strech in main menu fixen
+	Controller support
+	multiplayer support
+	do options
+
+mid priority:
+	change textures
+	create character animations
+
+low priority:
+	
